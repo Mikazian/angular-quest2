@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="container">
+    <header class="img-container">
+      <img [src]="user.photo" />
+    </header>
+    <section class="content">
+      <div>
+        <p>Nom : {{ user.name }}</p>
+        <p>Prénom : {{ user.firstName }}</p>
+        <p [hidden]="!showAge">Age: {{ user.age }}</p>
+      </div>
+      <div class="form">
+        <p>{{ biography }}</p>
+        <div class="form-input">
+          <input
+            id="biography"
+            [(ngModel)]="biography"
+            type="text"
+            placeholder="écrit quelque chose"
+          />
+          <label for="biography">Biographie</label>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <button (click)="toggleAge()">Afficher/Masquer mon âge</button>
+  </footer>
+</div>
