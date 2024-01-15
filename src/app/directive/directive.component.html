@@ -1,0 +1,7 @@
+<div>
+  <h1 [ngClass]="{ 'title-admin': isAdmin }">{{ title }}</h1>
+  <h2 [ngStyle]="{ color: isAdmin ? 'red' : 'black' }">Mike</h2>
+  <button>View</button>
+  <button *ngIf="isAdmin">Edit</button>
+  <button (click)="switchRole()">Switch to {{ role }}</button>
+</div>
